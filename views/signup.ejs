@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+  <title>Login Form</title>
+</head>
+<body>
+<div class="flex-container">
+  <div class="content-container">
+    <div class="form-container">
+      <%if(locals.errorMessage){%> 
+        <div class="alert-danger p-2 m-2">
+          <%=errorMessage%>
+        </div>
+        <%}%>
+      <form action="/login" method="POST">
+        <h1>
+          Signup
+        </h1>
+        <br>
+        <br>
+        <span class="subtitle">username:</span>
+        <br>
+        <input type="text" name="username" value="">
+        <br>
+        <span class="subtitle">Email:</span>
+        <br>
+        <input type="text" name="email" value="">
+        <br>
+        <span class="subtitle">PASSWORD:</span>
+        <br>
+        <input type="password" name="password" value="">
+        <br><br>
+        <input type="submit" value="SUBMIT" class="submit-btn">
+        <div style="color: white;margin-bottom:40px ;">
+          Already have an account? login
+          <a href="/">here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
